@@ -1,0 +1,64 @@
+
+
+<formulas>
+	<formula>
+		<id>1</id>
+                 <math xmlns="http://www.w3.org/1998/Math/MathML"> 
+                    <mrow>
+                      <mi>x</mi>
+                      <mo>&InvisibleTimes;</mo>
+                      <mi>y</mi>
+                  </mrow>
+                 </math>
+                <patron>SEQ</patron>
+		<atributoCalidad>Disponibilidad</atributoCalidad>
+		<datos>
+			<dato>Disponibilidad</dato>
+		</datos>
+	</formula>
+	<formula>
+		<id>2</id>
+		<math xmlns='http://www.w3.org/1998/Math/MathML'>
+                    <msup>
+                        <mi>x</mi>
+                        <mi>k</mi>
+                    </msup>
+                </math>
+                <patron>LOOP</patron> 
+		<atributoCalidad>Disponibilidad</atributoCalidad>
+		<datos>
+			<dato>Disponibilidad</dato>
+			<dato>Repeticiones</dato>
+		</datos>
+	</formula>
+	<formula>
+		<id>3</id>
+		<math xmlns='http://www.w3.org/1998/Math/MathML'>
+                <mrow>
+                 <mrow>
+                  <mi>px</mi>
+                  <mo>&InvisibleTimes;</mo>
+                  <mi>x</mi>
+                 </mrow>
+                 <mo>+</mo>
+                 <mrow>
+                  <mi>py</mi>
+                  <mo>&InvisibleTimes;</mo>
+                  <mi>y</mi>
+                 </mrow>
+                </mrow>
+               </math>
+                <patron>OR</patron>
+                 
+	</formula>
+	<formula>
+		<id>4</id>
+		<operacion>min ( S ( ) )</operacion> 
+                <patron>XOR</patron>
+	</formula>
+        <formula>
+		<id>5</id>
+		<operacion>producto ( S ( ) ) </operacion> 
+                <patron>AND</patron>
+	</formula>
+</formulas>
