@@ -1,0 +1,28 @@
+<formulas>
+	<formula>
+		<id>1</id>
+		<operacion>producto ( S ( ) )</operacion> 
+                <patron>SEQ</patron>
+	</formula>
+	<formula>
+		<id>2</id>
+		<operacion>s ^ r</operacion>
+                <patron>LOOP</patron> 
+	</formula>
+	<formula>
+		<id>3</id>
+		<operacion>sum ( S ( s * p )  )</operacion>
+                <patron>OR</patron>
+                 
+	</formula>
+	<formula>
+		<id>4</id>
+		<operacion>min ( S ( ) )</operacion> 
+                <patron>XOR</patron>
+	</formula>
+        <formula>
+		<id>5</id>
+		<operacion>producto ( S ( ) ) </operacion> 
+                <patron>AND</patron>
+	</formula>
+</formulas>
