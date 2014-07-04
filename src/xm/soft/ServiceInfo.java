@@ -1,6 +1,6 @@
 package xm.soft;
 
-public class Service {
+public class ServiceInfo {
 	private String mName;
 	private int mPerformance;
 	private double mAvailability;
