@@ -6,7 +6,9 @@ public class ServiceInfo {
 	private double mAvailability;
 	private String mExtraInfo;
 	private int mStatus;
-
+	public static final int NORMAL = 0;
+	public static final int WARNING = 1;
+	public static final int DISRUPT = 2;
 
 	public String getName(){
 		return mName;
