@@ -26,15 +26,31 @@ public class WServiceInfoProvider extends JFrame {
 	private WebEngine mEngine;
 	private SyncStack<ArrayList<ServiceInfo>> mStack = new SyncStack<>();
 	
+	/*
+	 * Prueba del componente, es importante que los datos esten en la misma 
+	 * pagina, no en un iframe de la pagina, esto sucede en el de mercado libre
+	 * y el de twitter, es posible solventar este problema llamando recursivamente 
+	 * al metodo para que procese la direccion de esos iframe, es por eso que
+	 * recomiendo que sea en un proceso en segundo plano en la aplicacion, estas
+	 * son las paginas de donde estan realmente los datos:
+	 * http://status.wikimedia.org/
+	 * http://status.mozilla.com/
+	 * https://dev.twitter.com/status => https://status.io.watchmouse.com/7617
+	 * http://developers.mercadolibre.com/api-health-view/
+	 * http://status.cloudmonitor.ca.com/
+	 * http://code.movideo.com/Media_API_Status => http://api.status.movideo.com/
+	 */
 	public static void main(String args[]){
 		WServiceInfoProvider provider = new WServiceInfoProvider();
-		provider.setVisible(true);
-		String url = "http://developers.mercadolibre.com/apps/api-health/";
-		url = "http://status.wikimedia.org/";
-		ArrayList<ServiceInfo> services = provider.getServices(url, 10000);
+		provider.setVisible(true); //no es necesario, pero para ver que cargue la pagina es bueno
+		String url = "http://status.io.watchmouse.com/7617";
+		//Conseguimos la informacion en un plazo a lo mas de 20 segundos,
+		//Este parametro debe depender de la velocidad de conexion y de procesamiento.
+		ArrayList<ServiceInfo> services = provider.getServices(url, 20000);
 		for (ServiceInfo service: services){
 			System.out.println(service);
 		}
+		
 		provider.dispose();
 	}
 	public WServiceInfoProvider() {
